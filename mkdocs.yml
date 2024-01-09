@@ -1,39 +1,54 @@
 site_name: Schema Driven Configuration
 nav:
   - Home: index.md
-  - Installation: 
-      - Overview: install/1_overview.md
-      - Pre-Requisites: install/2_prereq.md
-      - Kubernetes-collocated: install/3_k8s_collocated.md
-      - Kubernetes-distributed: install/4_k8s_distributed.md
-  - Getting Started: install/3_k8s_collocated.md
-  - Concepts:
-      - Schema-server: concepts/schema_server.md
-      - Data-server: concepts/data_server.md
-      - Cache: concepts/cache.md
-      - Config-server: concepts/config_server.md
-  - APIs:
-    - apis:
-      - Schema-server: apis/schema_server.md
-      - Data-server: apis/data_server.md
-      - Cache: apis/cache.md
-    - crds:
-      - Schema: crds/schema.md
-      - DiscoveryRule: crds/discovery_rule.md
-      - TargetConnectionProfile: crds/target_conn_profile.md
-      - TargetSyncProfile: crds/target_sync_profile.md
-      - Target: crds/target.md
-      - Config: crds/config.md
+  - Getting Started:
+    #- User guide: user_guide/introduction.md
+    - Installation: getting-started/installation.md
+    - Basic usage: basic_usage.md
+    - User guide: getting-started/user-guide.md
+  - Installation:
+    - Overview: install/1_overview.md
+    - Pre-Requisites: install/2_prereq.md
+    - Kubernetes-collocated: install/3_k8s_collocated.md
+    - Kubernetes-distributed: install/4_k8s_distributed.md
+  - User guide:
+    - Introduction: user_guide/introduction.md
+    - Configuration:
+      - Defining and loading Schema: crds/schema.md
+      - Discovery: #crds/discovery_rule.md
+        - Intro: crds/discovery_rule.md
+        - Static: crds/discovery_rule.md
+        - Dynamic: crds/discovery_rule.md
+      - Target Profiles: # crds/discovery_rule.md
+        - Target: crds/target.md
+        - Connection Profile: crds/target_conn_profile.md
+        - Sync Profile: crds/target_sync_profile.md
+        - Credentials: crds/target_sync_profile.md
+      - Config snippets: crds/config.md
+  - System architecture:
+      - Components:
+        - Schema-server: concepts/schema_server.md
+        - Data-server: concepts/data_server.md
+        - Cache: concepts/cache.md
+        - Config-server: concepts/config_server.md
+  - Deployment Examples:
+    - Intro: placeholder.md
+    - Collocated deployment: placeholder.md
+    - Distributed deployment: placeholder.md
+    - K8s Collocated deployment: placeholder.md
+    - K8s Distributed deployment: placeholder.md
   - Lab Examples:
     - About: examples/0_about.md
-    - K8s SR-Linux Collocated: examples/1_k8s_srl_collocated.md
-    - K8s SROS Collocated: examples/2_k8s_sros_collocated.md
-  - Development:
-    - About: dev/about.md
+    - K8s with gNMI devices (SR Linux): examples/1_k8s_srl_collocated.md
+    - K8s with NETCONF devices (SROS): examples/2_k8s_sros_collocated.md
   - Release Notes:
     - "0.0.1": rn/0.0.1.md
   - FAQ: faq/faq.md
-  - Community: community/community.md
+  - Community: 
+    - About: community/community.md
+    - Contributing:
+      - About: dev/about.md
+      - Ways to contribute: dev/about.md
 
 site_author: Wim Henderickx
 site_description: >-
@@ -156,7 +171,7 @@ markdown_extensions:
       fractions: false
   - pymdownx.snippets:
       check_paths: true
-      dedent_subsections: true
+      # dedent_subsections: true
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
